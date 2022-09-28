@@ -29,9 +29,8 @@ const CreateSkills = ({imageName, title, text }: CardSkillsProps) => {
                       {text}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+            <CardActions sx={{justifyContent:'center'}}>
+                <Button  size="small">Learn More</Button>
             </CardActions>
         </Card>
     )

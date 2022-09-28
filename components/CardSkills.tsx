@@ -1,5 +1,5 @@
 // Importando do Material IU
-import { Grid } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 
 // Importando componentes
 import CreateSkills from "./CreateSkills"
@@ -14,7 +14,13 @@ const dataSkills = dataCardSkills
 
 const CardSkiils = () => {
     return (
+        <>
+        {/* Titulo dos Cards Skills */}
+        <Typography gutterBottom variant="h4" component="div">
+                      Tecnologias que tenho contato diariamente
+        </Typography>
 
+         {/* Cards com Skills*/}
         <Grid container sx={{ justifyContent:"center"}}>
             {
                 dataSkills.map((cards, index) => (
@@ -24,7 +30,7 @@ const CardSkiils = () => {
                 ))
             }
         </Grid>
-
+        </>
     )
 }
 
