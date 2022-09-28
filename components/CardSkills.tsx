@@ -15,8 +15,8 @@ const CardSkiils = () => {
     return (
         <Grid item xs={12}>
             {
-                dataSkills.map((cards) => (
-                    <Grid sx={{display: "inline-block", margin: '5px' }}>
+                dataSkills.map((cards, index) => (
+                    <Grid key={index} sx={{ display: "inline-block", margin: '5px' }}>
                         <CreateSkills imageName={cards.imageName} title={cards.title} text={cards.text} />
                     </Grid>
                 ))
