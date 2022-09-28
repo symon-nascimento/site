@@ -1,22 +1,23 @@
 // Importando do Material IU
 import { Grid, Typography } from "@mui/material"
 
+
 // Importando componentes
 import CreateSkills from "./CreateSkills"
 
 // Importando dados
 import { dataCardSkills } from '../data/cardSkills'
-import { Box } from "@mui/system"
 
 
 // Melhorando nome de varíaveis
 const dataSkills = dataCardSkills
 
+
 const CardSkiils = () => {
     return (
         <>
         {/* Titulo dos Cards Skills */}
-        <Typography gutterBottom variant="h4" component="div">
+        <Typography gutterBottom variant="h4" component="div" sx={{textAlign:'center'}}>
                       Tecnologias que tenho contato diariamente
         </Typography>
 

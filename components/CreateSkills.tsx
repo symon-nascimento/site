@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 
 //Importando Tipos
 import { CardSkillsProps } from '../types/typesCardSkills';
-import { Grid } from '@mui/material';
 
 
 const CreateSkills = ({imageName, title, text }: CardSkillsProps) => {
