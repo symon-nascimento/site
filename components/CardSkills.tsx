@@ -6,6 +6,7 @@ import CreateSkills from "./CreateSkills"
 
 // Importando dados
 import { dataCardSkills } from '../data/cardSkills'
+import { Box } from "@mui/system"
 
 
 // Melhorando nome de varíaveis
@@ -13,15 +14,17 @@ const dataSkills = dataCardSkills
 
 const CardSkiils = () => {
     return (
-        <Grid item xs={12} spacing={2}>
+
+        <Grid container sx={{ justifyContent:"center"}}>
             {
                 dataSkills.map((cards, index) => (
-                    <Grid key={index} item xs={3} sx={{ display: "inline-block", padding: '4px', width: '300px'}}>
+                    <Grid key={index} sx={{ display: "inline-block", padding: '8px', width: '300px', }}>
                         <CreateSkills imageName={cards.imageName} title={cards.title} text={cards.text} />
                     </Grid>
                 ))
             }
         </Grid>
+
     )
 }
 
