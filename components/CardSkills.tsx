@@ -15,7 +15,7 @@ const dataSkills = dataCardSkills
 
 const CardSkiils = () => {
     return (
-        <div id="card">
+        <div style={{marginTop:'90px'}}>
         {/* Titulo dos Cards Skills */}
         <Typography gutterBottom variant="h4" component="div" sx={{textAlign:'center'}}>
                       Tecnologias que tenho contato diariamente

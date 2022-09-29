@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
     <NavBar />
     <div className={styles.container}>
       <Head>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-    </>
+    </div>
   )
 }
 
