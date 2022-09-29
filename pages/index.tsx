@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Symon Nascimento</title>
         <meta name="description" content="Hard Skills" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/devops.png" />
       </Head>
 
      
