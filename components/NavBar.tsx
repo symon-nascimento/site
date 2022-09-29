@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['Techs', 'Sobre', 'Contato'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Entrar', 'Sair'];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -55,7 +55,7 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            {/* LOGO */}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -99,7 +99,7 @@ const NavBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -111,7 +111,7 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           {/* LOGO */}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -128,7 +128,7 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" /* src="/static/images/avatar/2.jpg" */ />
               </IconButton>
             </Tooltip>
             <Menu
