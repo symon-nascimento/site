@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by Symon N Simon
+          Created by Symon N Simon
         </a>
       </footer>
     </div>
