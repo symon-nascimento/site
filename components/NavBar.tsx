@@ -13,8 +13,32 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Techs', 'Sobre', 'Contato'];
-const settings = ['Entrar', 'Sair'];
+// Nomes que aparecerão no menu e id para ancora
+const pages = [
+  {
+    name: 'Techs',
+    id: '#cards'
+  },
+  {
+    name: 'Sobre',
+    id: '#sobre'
+  },
+  {
+    name: 'Contato',
+    id: '#contato'
+  }
+
+]
+const settings = [
+  {
+    name: 'Entrar',
+    id: '#entrar',
+  },
+  {
+    name: 'Sair',
+    id: 'sair'
+  }
+]
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -36,15 +60,15 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="fixed"  sx={{backgroundColor:'#3c363b'}}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#3c363b' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1,  }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href=''
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -55,9 +79,8 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            {/* LOGO */}
+          {/*   LOGO */}
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -87,9 +110,9 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Button href={page.id}><Typography textAlign="center">{page.name}</Typography></Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -111,16 +134,17 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-           {/* LOGO */}
+           {/*  LOGO */}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
+                href={page.id}
+                key={index}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -147,9 +171,9 @@ const NavBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              {settings.map((setting, index) => (
+                <MenuItem key={index} onClick={handleCloseUserMenu}>
+                 <Button href={setting.id}><Typography textAlign="center">{setting.name}</Typography></Button>
                 </MenuItem>
               ))}
             </Menu>
