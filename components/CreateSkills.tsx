@@ -29,7 +29,7 @@ const CreateSkills = ({imageName, title, text }: CardSkillsProps) => {
                 </Typography>
             </CardContent>
             <CardActions sx={{justifyContent:'center'}}>
-                <Button  size="small">Learn More</Button>
+                <Button  size="small">Ler mais</Button>
             </CardActions>
         </Card>
     )

@@ -15,19 +15,18 @@ const dataSkills = dataCardSkills
 
 const CardSkiils = () => {
     return (
-        <>
+  
         <section id="cards">
-        <div >
+        <div style={{marginTop:'90px'}} id='teste'>
         {/* Titulo dos Cards Skills */}
         <Typography gutterBottom variant="h4" component="div" sx={{textAlign:'center'}}>
                       Tecnologias que tenho contato diariamente
         </Typography>
-
          {/* Cards com Skills*/}
-        <Grid container sx={{ justifyContent:"center"}}>
+        <Grid sx={{marginLeft:'20px'}}>
             {
                 dataSkills.map((cards, index) => (
-                    <Grid key={index} sx={{ display: "inline-block", padding: '8px', width: '300px', }}>
+                    <Grid key={index} sx={{ display: "inline-block", padding: '8px', width: '300px'}}>
                         <CreateSkills imageName={cards.imageName} title={cards.title} text={cards.text} />
                     </Grid>
                 ))
@@ -35,7 +34,7 @@ const CardSkiils = () => {
         </Grid>
         </div>
         </section>
-        </>
+       
     )
 }
 

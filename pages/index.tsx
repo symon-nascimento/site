@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
      
-      <main className={styles.main} style={{overflow:'auto'}}>
+      <main className={styles.main} style={{overflow:'auto', justifySelf:'center'}}>
         <CardSkiils />
       </main>
 
